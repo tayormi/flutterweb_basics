@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:web_basics/locator.dart';
+import 'package:web_basics/views/layout_template/layout_template.dart';
 
 import 'views/home_view.dart';
 
 void main() {
+  setupLocator();
   runApp(MyApp());
 }
 
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
        // visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeView(),
+      home: LayoutTemplate(),
     );
   }
 }

@@ -4,8 +4,9 @@ import 'package:web_basics/widgets/navigation_bar/navbar_item.dart';
 class DrawerItem extends StatelessWidget {
   final String title;
   final IconData icon;
+  final String navigationPath;
 
-  const DrawerItem({Key key, @required this.title, @required this.icon}) : super(key: key);
+  const DrawerItem({Key key, @required this.title, @required this.icon, @required this.navigationPath}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,7 +15,7 @@ class DrawerItem extends StatelessWidget {
         children: <Widget>[
           Icon(icon),
           SizedBox(width: 30),
-          NavBarItem(title: title)
+          NavBarItem(title: title, navigationPath: navigationPath,)
       ],),
     );
   }

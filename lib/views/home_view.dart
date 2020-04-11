@@ -9,22 +9,9 @@ import 'home_content_mobile.dart';
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(
-          builder: (context, sizingInformation) => Scaffold(
-          backgroundColor: Colors.white,
-          body: CenteredView(
-            child: Column(
-              children: <Widget>[
-                NavigationBar(),
-                Expanded(
-                child: ScreenTypeLayout(
+    return ScreenTypeLayout(
                   mobile: HomeContentMobile(),
                   desktop: HomeContentDesktop(),
-                ),
-              )
-              ],
-            ),
-          )),
-    );
+                );
   }
 }
